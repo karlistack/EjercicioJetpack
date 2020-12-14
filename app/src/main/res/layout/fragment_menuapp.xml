@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menuapp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/holo_green_dark"
+        tools:ignore="UselessParent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/holo_green_dark"
+            android:text="Bienvenido a la app"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/botonWeb"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:textSize="25pt"
+            android:background="@android:color/holo_blue_dark"
+            android:text="WEB" />
+
+        <Button
+            android:id="@+id/botonCamara"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:textSize="25pt"
+
+            android:background="@android:color/holo_blue_light"
+            android:text="Cámara" />
+
+        <Button
+            android:id="@+id/botonCalculadora"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="20pt"
+            android:background="@android:color/holo_blue_bright"
+            android:text="Calculadora" />
+    </LinearLayout>
+
+</FrameLayout>

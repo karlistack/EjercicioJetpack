@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/menuapp">
+
+    <fragment
+        android:id="@+id/menuapp"
+        android:name="com.example.ejerciciojetpack.menuapp"
+        android:label="fragment_menuapp"
+        tools:layout="@layout/fragment_menuapp"/>
+     <action
+        android:id="@+id/menu_a_web"
+        app:destination="@id/web"
+        tools:layout="@layout/fragment_web" />
+     <action
+        android:id="@+id/menu_a_camara"
+        app:destination="@id/camara" />
+     <action
+        android:id="@+id/menu_a_calculadora"
+        app:destination="@id/calculadora"
+        />
+    <fragment
+        android:id="@+id/camara"
+        android:name="com.example.ejerciciojetpack.Camara"
+        android:label="fcamara"
+        tools:layout="@layout/fragment_camara" />
+
+    <fragment
+        android:id="@+id/web"
+        android:name="com.example.ejerciciojetpack.web"
+        android:label="fragment_web"
+        tools:layout="@layout/fragment_web" />
+
+
+   <fragment
+        android:id="@+id/calculadora"
+        android:name="com.example.ejerciciojetpack.Calculadora"
+        android:label="fragment_calculadora"
+        tools:layout="@layout/fragment_calculadora">
+        <action
+            android:id="@+id/cal_a_suma"
+            app:destination="@id/suma" />
+        <action
+            android:id="@+id/cal_a_resta"
+            app:destination="@id/resta" />
+        <action
+            android:id="@+id/cal_a_division"
+            app:destination="@id/divide" />
+        <action
+            android:id="@+id/cal_a_multiplicacion"
+            app:destination="@id/multiplicacion" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/divide"
+        android:name="com.example.ejerciciojetpack.divide"
+        android:label="fragment_divide"
+        tools:layout="@layout/fragment_divide" />
+    <fragment
+        android:id="@+id/suma"
+        android:name="com.example.ejerciciojetpack.suma"
+        android:label="fragment_suma"
+        tools:layout="@layout/fragment_suma" />
+    <fragment
+        android:id="@+id/resta"
+        android:name="com.example.ejerciciojetpack.resta"
+        android:label="fragment_resta"
+        tools:layout="@layout/fragment_resta" />
+    <fragment
+        android:id="@+id/multiplicacion"
+        android:name="com.example.ejerciciojetpack.multiplicacion"
+        android:label="fragment_multiplicacion"
+        tools:layout="@layout/fragment_multiplicacion" />
+
+</navigation>

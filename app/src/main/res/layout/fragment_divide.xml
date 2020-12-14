@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".divide">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/resultadodivi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="341dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginRight="133dp"
+        android:layout_marginBottom="342dp"
+        android:text=""
+        android:hint="RESULTADO"
+        android:textSize="36sp"
+        android:textStyle="bold">
+
+    </TextView>
+    </FrameLayout>
