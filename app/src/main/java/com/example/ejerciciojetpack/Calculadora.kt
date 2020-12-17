@@ -1,9 +1,12 @@
 package com.example.ejerciciojetpack
 
+import android.content.Context
 import android.os.Bundle
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_calculadora.*
@@ -23,6 +26,10 @@ class Calculadora : Fragment() {
         super.onCreate(savedInstanceState)
         arguments?.let {
         }
+        Toast.makeText(context,
+                "Introduce los numeros y selecciona la opcion que quieras",
+                Toast.LENGTH_LONG)
+                .show();
     }
 
     override fun onCreateView(
@@ -31,6 +38,7 @@ class Calculadora : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_calculadora, container, false)
+
     }
 
     companion object {
@@ -46,6 +54,7 @@ class Calculadora : Fragment() {
     var calculo: Int = 0
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val text = "introduce los numeros y selecciona las operaciones"
         super.onViewCreated(view, savedInstanceState)
 
 
@@ -56,17 +65,17 @@ class Calculadora : Fragment() {
             if(radioButtonSum.isChecked){
                 calculo = num1+num2
                 val bundle = Bundle()
-                bundle.putString("key", ""+calculo)
+                bundle.putString("key", "" + calculo)
                 Navigation.findNavController(it).navigate(R.id.suma, bundle)
             }else if(radioButtonRes.isChecked){
                 calculo = num1-num2
                 val bundle = Bundle()
-                bundle.putString("key", ""+calculo)
+                bundle.putString("key", "" + calculo)
                 Navigation.findNavController(it).navigate(R.id.resta, bundle)
             }else if(radioButtonMul.isChecked){
                 calculo = num1*num2
                 val bundle = Bundle()
-                bundle.putString("key", ""+calculo)
+                bundle.putString("key", "" + calculo)
                 Navigation.findNavController(it).navigate(R.id.multiplicacion, bundle)
             }else if(radioButtonDiv.isChecked) {
 
@@ -75,7 +84,7 @@ class Calculadora : Fragment() {
                     bundle.putString("key", "Error de calculo, no se puede dividir entre 0.")
                 }else{
                     calculo = num1/num2
-                    bundle.putString("key", ""+calculo)
+                    bundle.putString("key", "" + calculo)
                 }
                 Navigation.findNavController(it).navigate(R.id.divide, bundle)
             }
