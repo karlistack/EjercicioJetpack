@@ -113,7 +113,7 @@
         </RadioGroup>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/botonresultado"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10pt"
             android:background="@android:color/holo_green_light"
